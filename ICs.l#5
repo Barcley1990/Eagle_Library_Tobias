@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -1321,7 +1321,7 @@ Source: www.ti.com ... TPS40055 package.pdf &amp; slma002.pdf</description>
 <pin name="OUT14" x="-15.24" y="-17.78" length="middle" direction="out"/>
 <pin name="OUT15" x="-15.24" y="-20.32" length="middle" direction="out"/>
 </symbol>
-<symbol name="UCC28740">
+<symbol name="UCC2871">
 <description>The UCC28740 isolated-flyback power-supply controller provides Constant-Voltage (CV) using an optical coupler to improve transient response to large- load steps. Constant-Current (CC) regulation is accomplished through Primary-Side Regulation (PSR) techniques. This device processes information from opto-coupled feedback and an auxiliary flyback winding for precise high-performance control of output voltage and current.
 An internal 700-V startup switch, dynamically controlled operating states, and a tailored modulation profile support ultra-low standby power without sacrificing startup time or output transient response.
 Control algorithms in the UCC28740 allow operating efficiencies to meet or exceed applicable standards. The drive output interfaces to a MOSFET power switch. Discontinuous conduction mode (DCM) with valley-switching reduces switching losses. Modulation of switching frequency and primary current-peak amplitude (FM and AM) keeps the conversion efficiency high across the entire load and line ranges.
@@ -1339,21 +1339,6 @@ The controller has a maximum switching frequency of 100 kHz and always maintains
 <pin name="HV" x="10.16" y="10.16" length="short" rot="R180"/>
 <text x="-7.62" y="13.716" size="1.778" layer="95">&gt;NAME</text>
 <text x="1.778" y="-10.414" size="1.778" layer="97">&gt;VALUE</text>
-</symbol>
-<symbol name="UCC2871">
-<wire x1="-7.62" y1="10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="10.16" x2="7.62" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-12.7" x2="-7.62" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-12.7" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
-<pin name="VDD" x="10.16" y="7.62" length="short" rot="R180"/>
-<pin name="VS" x="10.16" y="2.54" length="short" rot="R180"/>
-<pin name="CBC" x="10.16" y="-2.54" length="short" rot="R180"/>
-<pin name="GND" x="0" y="-15.24" length="short" rot="R90"/>
-<pin name="CS" x="-10.16" y="-2.54" length="short"/>
-<pin name="DRV" x="-10.16" y="2.54" length="short"/>
-<pin name="HV" x="-10.16" y="7.62" length="short"/>
-<text x="-7.62" y="12.7" size="1.778" layer="96">&gt;NAME</text>
-<text x="2.54" y="-15.24" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1945,7 +1930,7 @@ open and two normally closed switches</description>
 </deviceset>
 <deviceset name="UCC28740">
 <gates>
-<gate name="G$1" symbol="UCC28740" x="0" y="-2.54"/>
+<gate name="G$1" symbol="UCC2871" x="0" y="-2.54"/>
 </gates>
 <devices>
 <device name="" package="SOIC7">
@@ -1953,27 +1938,6 @@ open and two normally closed switches</description>
 <connect gate="G$1" pin="CS" pad="5"/>
 <connect gate="G$1" pin="DRV" pad="6"/>
 <connect gate="G$1" pin="FB" pad="3"/>
-<connect gate="G$1" pin="GND" pad="4"/>
-<connect gate="G$1" pin="HV" pad="7"/>
-<connect gate="G$1" pin="VDD" pad="1"/>
-<connect gate="G$1" pin="VS" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="UCC2871">
-<gates>
-<gate name="G$1" symbol="UCC2871" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOIC7">
-<connects>
-<connect gate="G$1" pin="CBC" pad="3"/>
-<connect gate="G$1" pin="CS" pad="5"/>
-<connect gate="G$1" pin="DRV" pad="6"/>
 <connect gate="G$1" pin="GND" pad="4"/>
 <connect gate="G$1" pin="HV" pad="7"/>
 <connect gate="G$1" pin="VDD" pad="1"/>

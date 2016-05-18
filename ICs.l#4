@@ -1341,19 +1341,6 @@ The controller has a maximum switching frequency of 100 kHz and always maintains
 <text x="1.778" y="-10.414" size="1.778" layer="97">&gt;VALUE</text>
 </symbol>
 <symbol name="UCC2871">
-<wire x1="-7.62" y1="10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="10.16" x2="7.62" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-12.7" x2="-7.62" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-12.7" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
-<pin name="VDD" x="10.16" y="7.62" length="short" rot="R180"/>
-<pin name="VS" x="10.16" y="2.54" length="short" rot="R180"/>
-<pin name="CBC" x="10.16" y="-2.54" length="short" rot="R180"/>
-<pin name="GND" x="0" y="-15.24" length="short" rot="R90"/>
-<pin name="CS" x="-10.16" y="-2.54" length="short"/>
-<pin name="DRV" x="-10.16" y="2.54" length="short"/>
-<pin name="HV" x="-10.16" y="7.62" length="short"/>
-<text x="-7.62" y="12.7" size="1.778" layer="96">&gt;NAME</text>
-<text x="2.54" y="-15.24" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1953,27 +1940,6 @@ open and two normally closed switches</description>
 <connect gate="G$1" pin="CS" pad="5"/>
 <connect gate="G$1" pin="DRV" pad="6"/>
 <connect gate="G$1" pin="FB" pad="3"/>
-<connect gate="G$1" pin="GND" pad="4"/>
-<connect gate="G$1" pin="HV" pad="7"/>
-<connect gate="G$1" pin="VDD" pad="1"/>
-<connect gate="G$1" pin="VS" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="UCC2871">
-<gates>
-<gate name="G$1" symbol="UCC2871" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOIC7">
-<connects>
-<connect gate="G$1" pin="CBC" pad="3"/>
-<connect gate="G$1" pin="CS" pad="5"/>
-<connect gate="G$1" pin="DRV" pad="6"/>
 <connect gate="G$1" pin="GND" pad="4"/>
 <connect gate="G$1" pin="HV" pad="7"/>
 <connect gate="G$1" pin="VDD" pad="1"/>
