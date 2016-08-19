@@ -2070,6 +2070,38 @@ open and two normally closed switches</description>
 </devices>
 </deviceset>
 <deviceset name="PCA9635">
+<description>The PCA9635 is an I2C-bus controlled 16-bit LED driver optimized for
+Red/Green/Blue/Amber (RGBA) color mixing applications. Each LED output has its own
+8-bit resolution (256 steps) fixed frequency individual PWM controller that operates at
+97 kHz with a duty cycle that is adjustable from 0 % to 99.6 % to allow the LED to be set
+to a specific brightness value. An additional 8-bit resolution (256 steps) group PWM
+controller has both a fixed frequency of 190 Hz and an adjustable frequency between
+24 Hz to once every 10.73 seconds with a duty cycle that is adjustable from 0 % to 99.6 %
+that is used to either dim or blink all LEDs with the same value.
+Each LED output can be off, on (no PWM control), set at its individual PWM controller
+value or at both individual and group PWM controller values. The LED output driver is
+programmed to be either open-drain with a 25 mA current sink capability at 5 V or
+totem-pole with a 25 mA sink, 10 mA source capability at 5 V. The PCA9635 operates with
+a supply voltage range of 2.3 V to 5.5 V and the outputs are 5.5 V tolerant. LEDs can be
+directly connected to the LED output (up to 25 mA, 5.5 V) or controlled with external
+drivers and a minimum amount of discrete components for larger current or higher voltage
+LEDs.
+The PCA9635 is one of the first LED controller devices in a new Fast-mode Plus (Fm+)
+family. Fm+ devices offer higher frequency (up to 1 MHz) and more densely populated bus
+operation (up to 4000 pF).
+The active LOW Output Enable input pin (OE) allows asynchronous control of the LED
+outputs and can be used to set all the outputs to a defined I2C-bus programmable logic
+state. The OE can also be used to externally PWM the outputs, which is useful when
+multiple devices need to be dimmed or blinked together using software control.
+Software programmable LED Group and three Sub Call I2C-bus addresses allow all or
+defined groups of PCA9635 devices to respond to a common I2C-bus address, allowing
+for example, all red LEDs to be turned on or off at the same time or marquee chasing
+effect, thus minimizing I2C-bus commands. Seven hardware address pins allow up to
+126 devices on the same bus.
+The Software Reset (SWRST) Call allows the master to perform a reset of the PCA9635
+through the I2C-bus, identical to the Power-On Reset (POR) that initializes the registers to
+their default state causing the outputs to be set HIGH (LED off). This allows an easy and
+quick way to reconfigure all device registers to the same condition.</description>
 <gates>
 <gate name="G$1" symbol="PCA9635" x="0" y="5.08"/>
 </gates>
